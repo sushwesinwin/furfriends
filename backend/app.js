@@ -1,7 +1,7 @@
-const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
-const { PrismaClient } = require("@prisma/client");
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import authRoutes from "./src/routes/authRoutes.js";
 
 // Initialize app
 const app = express();
@@ -15,6 +15,7 @@ dotenv.config();
 app.get("/", (req, res) => {
     res.send("Hello World!");
 });
+app.use("/api/auth", authRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
