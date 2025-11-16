@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./src/routes/authRoutes.js";
 import petRoutes from "./src/routes/petRoutes.js";
+import productRoutes from "./src/routes/productRoutes.js";
 
 // Initialize app
 const app = express();
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 app.use("/api/auth", authRoutes);   
 app.use("/api/pets", petRoutes);
+app.use("/api/products", productRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
