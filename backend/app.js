@@ -6,6 +6,7 @@ import petRoutes from "./src/routes/petRoutes.js";
 import productRoutes from "./src/routes/productRoutes.js";
 import adpotionRoutes from "./src/routes/adpotionRoutes.js";
 import appointmentRoutes from "./src/routes/appointmentRoutes.js";
+import blogRoutes from "./src/routes/blogRoutes.js";
 
 // Initialize app
 const app = express();
@@ -24,6 +25,7 @@ app.use("/api/pets", petRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/adoptions", adpotionRoutes);
 app.use("/api/appointments", appointmentRoutes);
+app.use("/api/blog", blogRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
