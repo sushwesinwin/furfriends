@@ -8,6 +8,7 @@ import adpotionRoutes from "./src/routes/adpotionRoutes.js";
 import appointmentRoutes from "./src/routes/appointmentRoutes.js";
 import blogRoutes from "./src/routes/blogRoutes.js";
 import orderRoutes from "./src/routes/orderRoutes.js";
+import cartRoutes from "./src/routes/cartRoutes.js";
 
 // Initialize app
 const app = express();
@@ -28,6 +29,7 @@ app.use("/api/adoptions", adpotionRoutes);
 app.use("/api/appointments", appointmentRoutes);
 app.use("/api/blog", blogRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/cart", cartRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
