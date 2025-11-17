@@ -7,6 +7,7 @@ import productRoutes from "./src/routes/productRoutes.js";
 import adpotionRoutes from "./src/routes/adpotionRoutes.js";
 import appointmentRoutes from "./src/routes/appointmentRoutes.js";
 import blogRoutes from "./src/routes/blogRoutes.js";
+import orderRoutes from "./src/routes/orderRoutes.js";
 
 // Initialize app
 const app = express();
@@ -26,6 +27,7 @@ app.use("/api/products", productRoutes);
 app.use("/api/adoptions", adpotionRoutes);
 app.use("/api/appointments", appointmentRoutes);
 app.use("/api/blog", blogRoutes);
+app.use("/api/orders", orderRoutes);
 
 // Start server
 const PORT = process.env.PORT || 3000;
